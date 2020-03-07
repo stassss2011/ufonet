@@ -41,7 +41,11 @@ Use [docker](https://www.docker.com)
 ### DOCKER RUN
 
 ```\
-docker run -ti --rm --name ufonet -v ${HOME}:/home/ufonet -p 9999:9999 alexandreoda/ufonet
+docker run -ti --rm \
+--name ufonet \
+-v ${HOME}:/home/ufonet \
+-p 9999:9999 \
+alexandreoda/ufonet
 ```
 
 > link to Ufonet <http://0.0.0.0:9999>

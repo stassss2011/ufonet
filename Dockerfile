@@ -20,8 +20,7 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   python-requests \
   python-scapy \
   dnsutils \
-  tor \
-  privoxy && \
+  tor && \
   rm -rf /var/lib/apt/lists/*
   
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
@@ -43,4 +42,4 @@ RUN echo -e '\033[36;1m ******* SELECT WORKING SPACE ******** \033[0m'
 WORKDIR ${HOME}/ufonet/
 
 RUN echo -e '\033[36;1m ******* CONTAINER START COMMAND ******** \033[0m'
-CMD sudo service tor start && sudo service privoxy start && ./ufonet --check-tor --proxy="http://127.0.0.1:8118" && ./ufonet --download-zombies --force-yes && ./ufonet --gui \
+CMD sudo service tor start && ./ufonet --check-tor && ./ufonet --download-zombies --force-yes && ./ufonet --gui \

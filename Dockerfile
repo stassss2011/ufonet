@@ -20,7 +20,8 @@ RUN echo -e '\033[36;1m ******* INSTALL PACKAGES ******** \033[0m' && \
   python-requests \
   python-scapy \
   dnsutils \
-  tor && \
+  tor \
+  privoxy && \
   rm -rf /var/lib/apt/lists/*
   
 RUN echo -e '\033[36;1m ******* ADD USER ******** \033[0m' && \
